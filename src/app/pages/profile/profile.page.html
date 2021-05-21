@@ -1,0 +1,74 @@
+<ion-content [fullscreen]="true">
+
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+     <ion-menu-button *ngIf="!back"></ion-menu-button>
+     <ion-back-button *ngIf="back" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button fill="clear">EDIT</ion-button>
+     </ion-buttons>
+  </ion-toolbar>
+  <ion-grid class="main-header">
+    <div align="center">
+      <ion-avatar>
+        <img src="assets/imgs/2.png" />
+      </ion-avatar>
+    </div>
+  </ion-grid>
+
+  <ion-row class="ion-padding-horizontal">
+    <ion-col size="6">
+      <ion-item lines="none" class="ion-text-center">
+        <ion-icon name="water" color="primary"></ion-icon>
+        <ion-label>
+          34
+          <p>Requests</p>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-item lines="none" class="ion-text-center">
+        <ion-icon name="trophy" color="primary"></ion-icon>
+        <ion-label>
+          14
+          <p>Donations</p>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-list lines="full">
+    <ion-item>
+      <ion-label>
+        <ion-text>Name</ion-text>
+        <p><ion-text color="dark">Nikhil Agarwal</ion-text></p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-text>Phone</ion-text>
+        <p><ion-text color="dark">9999900000</ion-text></p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-text>Email</ion-text>
+        <p><ion-text color="dark">nyk@xyz.com</ion-text></p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-text>Age</ion-text>
+        <p><ion-text color="dark">29 years</ion-text></p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-text>Address</ion-text>
+        <p><ion-text color="dark">India</ion-text></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

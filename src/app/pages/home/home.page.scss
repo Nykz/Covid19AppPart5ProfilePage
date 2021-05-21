@@ -1,0 +1,110 @@
+ion-header {
+  background: var(--ion-color-light);
+  app-shrink-header {
+    display: block;
+    overflow: hidden;
+    ion-grid {
+      background: var(--ion-color-primary);
+      margin-top: -5px;
+      border-radius: 0 0 5px 5px;
+      // padding-bottom: 120px;
+    }
+    .popover {
+      background: var(--ion-color-white);
+      border-radius: 10px;
+      width: 90%;
+      margin: auto;
+      // margin-top: -120px;
+      ion-item {
+        ion-label {
+          margin: 0;
+           h1 {
+             font-size: 1.8rem;
+           }
+           p {
+             margin-top: 3px;
+             font-size: 0.8rem;
+           }
+           ion-text {
+            font-size: 0.7rem;
+           }
+        }
+      }
+      canvas {
+        height: 70px !important;
+      }
+    }
+  }
+  div {
+    background: var(--ion-color-light);
+    ion-segment {
+      --background: var(--ion-color-white);
+      border-radius: 20px;
+      --margin-top: 5px;
+      --margin-bottom: 5px;
+      ion-segment-button {
+        --background-checked: var(--ion-color-primary);
+        --indicator-color: var(--ion-color-primary);
+        --border-radius: 20px;
+        --color: var(--ion-color-primary);
+        --color-checked: var(--ion-color-white);
+      }
+    }
+  }
+}
+
+ion-content {
+  --background: var(--ion-color-light);
+  ion-list {
+    background: var(--ion-color-light);
+    .heading {
+      font-family: lato;
+    }
+    .popItem {
+      width: 90%;
+      margin: auto;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      padding: 0;
+      ion-thumbnail {
+        min-width: 5rem;
+        min-height: 6rem;
+        border-radius: 10px;
+        background: var(--ion-color-secondary);
+        div {
+          background-color: var(--ion-color-primary);
+          border-radius: 10px 10px 0 0;
+          padding-bottom: 2px;
+          ion-text {
+            font-size: 0.7rem;
+            font-weight: bold;
+          }
+        }
+        p {
+          ion-text {
+            font-size: 2.5rem !important;
+          }
+        }
+      }
+      ion-label {
+        ion-note {
+          font-size: 1.1rem;
+          letter-spacing: 0.5px;
+        }
+        p {
+          margin-top: 5px;
+          ion-text {
+            span {
+              color: var(--ion-color-dark);
+              padding: 0 5px;
+            }
+          }
+        }
+      }
+      ion-fab {
+        margin-right: -15px !important;
+        margin-top: -10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<ion-split-pane contentId="main-content">
+  <ion-menu contentId="main-content" type="overlay">
+    <ion-content>
+      <ion-list class="ion-text-center main-header">
+        <div align="center">
+          <ion-avatar>
+            <img src="assets/imgs/2.png" />
+          </ion-avatar>
+          <ion-label color="white">
+            Nikhil Agarwal
+            <p>
+              <ion-text>9999900000 | nyk@xyz.com</ion-text>
+            </p>
+          </ion-label>
+        </div>
+      </ion-list>
+
+      <ion-menu-toggle 
+        class="menu-items" 
+        [autoHide]="false" 
+        *ngFor="let page of pages; let i = index">
+        <ion-item 
+          *ngIf="!page?.route"
+          color="secondary" 
+          class="ion-padding-start"
+          lines="none" 
+          detail="false"
+          [routerLink]="[page.url]"
+          routerDirection="root"
+          routerLinkActive="selected">
+          <ion-icon slot="start" [ios]="page.icon + '-outline'" [md]="page.icon + '-sharp'"></ion-icon>
+          <ion-label>{{page.title}}</ion-label>
+        </ion-item>
+        <ion-item 
+          *ngIf="page?.route"
+          color="secondary" 
+          class="ion-padding-start"
+          lines="none" 
+          detail="false"
+          (click)="signOut()">
+          <ion-icon slot="start" [ios]="page.icon + '-outline'" [md]="page.icon + '-sharp'"></ion-icon>
+          <ion-label>{{page.title}}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-content>
+    <ion-footer class="ion-no-border">
+      <ion-toolbar color="secondary">
+        <ion-item lines="none" color="secondary">
+          <ion-label>Reach us via</ion-label>
+          <ion-icon slot="end" name="call-outline"></ion-icon>
+          <ion-icon slot="end" name="mail-outline"></ion-icon>
+          <ion-icon slot="end" name="logo-whatsapp"></ion-icon>
+        </ion-item>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-menu>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-split-pane>
